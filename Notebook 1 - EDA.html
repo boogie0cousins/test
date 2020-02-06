@@ -13078,7 +13078,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc" style="margin-top: 1em;"><ul class="toc-item"><li><span><a href="#Preprocessing-Step" data-toc-modified-id="Preprocessing-Step-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Preprocessing Step</a></span><ul class="toc-item"><li><span><a href="#Read-data" data-toc-modified-id="Read-data-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Read data</a></span></li><li><span><a href="#Plot-the-data" data-toc-modified-id="Plot-the-data-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Plot the data</a></span></li><li><span><a href="#Identify-Outliers" data-toc-modified-id="Identify-Outliers-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Identify Outliers</a></span><ul class="toc-item"><li><span><a href="#Outliers-using-Z-score" data-toc-modified-id="Outliers-using-Z-score-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Outliers using Z-score</a></span></li><li><span><a href="#Outliers-usng-Modified-Z-score" data-toc-modified-id="Outliers-usng-Modified-Z-score-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Outliers usng Modified Z-score</a></span></li><li><span><a href="#Outliers-using-InterQuartile-Range" data-toc-modified-id="Outliers-using-InterQuartile-Range-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>Outliers using InterQuartile Range</a></span></li></ul></li><li><span><a href="#Fix-the-outliers-using-IQR-method" data-toc-modified-id="Fix-the-outliers-using-IQR-method-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Fix the outliers using IQR method</a></span></li></ul></li><li><span><a href="#Correlation-between-Signal-and-ClosePrice" data-toc-modified-id="Correlation-between-Signal-and-ClosePrice-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Correlation between Signal and ClosePrice</a></span></li><li><span><a href="#Relationship-between-Signal-and-ClosePrice" data-toc-modified-id="Relationship-between-Signal-and-ClosePrice-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Relationship between Signal and ClosePrice</a></span></li><li><span><a href="#Modeling" data-toc-modified-id="Modeling-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Modeling</a></span></li><li><span><a href="#Quality-Check-of-Model" data-toc-modified-id="Quality-Check-of-Model-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Quality Check of Model</a></span><ul class="toc-item"><li><span><a href="#Mean-of-residuals-should-be-0" data-toc-modified-id="Mean-of-residuals-should-be-0-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Mean of residuals should be 0</a></span></li><li><span><a href="#Residuals-are-homoscedastic" data-toc-modified-id="Residuals-are-homoscedastic-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Residuals are homoscedastic</a></span><ul class="toc-item"><li><span><a href="#Residual-vs-Fitted-values-plot" data-toc-modified-id="Residual-vs-Fitted-values-plot-5.2.1"><span class="toc-item-num">5.2.1&nbsp;&nbsp;</span>Residual vs Fitted values plot</a></span></li><li><span><a href="#Breusch-Pagan-Test" data-toc-modified-id="Breusch-Pagan-Test-5.2.2"><span class="toc-item-num">5.2.2&nbsp;&nbsp;</span>Breusch-Pagan Test</a></span></li></ul></li><li><span><a href="#Residuals-are-uncorrelated" data-toc-modified-id="Residuals-are-uncorrelated-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Residuals are uncorrelated</a></span><ul class="toc-item"><li><span><a href="#Plotting-Autocorrelation-Function" data-toc-modified-id="Plotting-Autocorrelation-Function-5.3.1"><span class="toc-item-num">5.3.1&nbsp;&nbsp;</span>Plotting Autocorrelation Function</a></span></li><li><span><a href="#Durbin-Watson-Test" data-toc-modified-id="Durbin-Watson-Test-5.3.2"><span class="toc-item-num">5.3.2&nbsp;&nbsp;</span>Durbin-Watson Test</a></span></li><li><span><a href="#Fix" data-toc-modified-id="Fix-5.3.3"><span class="toc-item-num">5.3.3&nbsp;&nbsp;</span>Fix</a></span></li></ul></li><li><span><a href="#Independent-variable-and-residuals-are-uncorrelated" data-toc-modified-id="Independent-variable-and-residuals-are-uncorrelated-5.4"><span class="toc-item-num">5.4&nbsp;&nbsp;</span>Independent variable and residuals are uncorrelated</a></span></li><li><span><a href="#Normality-test-of-residuals" data-toc-modified-id="Normality-test-of-residuals-5.5"><span class="toc-item-num">5.5&nbsp;&nbsp;</span>Normality test of residuals</a></span><ul class="toc-item"><li><span><a href="#Jarque-Barra-test" data-toc-modified-id="Jarque-Barra-test-5.5.1"><span class="toc-item-num">5.5.1&nbsp;&nbsp;</span>Jarque-Barra test</a></span></li><li><span><a href="#Fixes" data-toc-modified-id="Fixes-5.5.2"><span class="toc-item-num">5.5.2&nbsp;&nbsp;</span>Fixes</a></span></li></ul></li></ul></li><li><span><a href="#Conclusion" data-toc-modified-id="Conclusion-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Conclusion</a></span></li><li><span><a href="#Future-Work:" data-toc-modified-id="Future-Work:-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Future Work:</a></span><ul class="toc-item"><li><span><a href="#Feature-Engineering" data-toc-modified-id="Feature-Engineering-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Feature Engineering</a></span><ul class="toc-item"><li><span><a href="#DateTime-based-features" data-toc-modified-id="DateTime-based-features-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>DateTime-based features</a></span></li><li><span><a href="#Technical-Indicators" data-toc-modified-id="Technical-Indicators-7.1.2"><span class="toc-item-num">7.1.2&nbsp;&nbsp;</span>Technical Indicators</a></span></li><li><span><a href="#Lagged-Features" data-toc-modified-id="Lagged-Features-7.1.3"><span class="toc-item-num">7.1.3&nbsp;&nbsp;</span>Lagged Features</a></span></li></ul></li><li><span><a href="#Advanced-Machine-Learning-Models" data-toc-modified-id="Advanced-Machine-Learning-Models-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Advanced Machine Learning Models</a></span></li></ul></li></ul></div>
+<div class="toc" style="margin-top: 1em;"><ul class="toc-item"><li><span><a href="#Preprocessing-Step" data-toc-modified-id="Preprocessing-Step-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Preprocessing Step</a></span><ul class="toc-item"><li><span><a href="#Read-data" data-toc-modified-id="Read-data-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Read data</a></span></li><li><span><a href="#Plot-the-data" data-toc-modified-id="Plot-the-data-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Plot the data</a></span></li><li><span><a href="#Identify-Outliers" data-toc-modified-id="Identify-Outliers-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Identify Outliers</a></span><ul class="toc-item"><li><span><a href="#Outliers-using-Z-score" data-toc-modified-id="Outliers-using-Z-score-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Outliers using Z-score</a></span></li><li><span><a href="#Outliers-usng-Modified-Z-score" data-toc-modified-id="Outliers-usng-Modified-Z-score-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Outliers usng Modified Z-score</a></span></li><li><span><a href="#Outliers-using-InterQuartile-Range" data-toc-modified-id="Outliers-using-InterQuartile-Range-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>Outliers using InterQuartile Range</a></span></li></ul></li><li><span><a href="#Fix-the-outliers-using-IQR-method" data-toc-modified-id="Fix-the-outliers-using-IQR-method-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Fix the outliers using IQR method</a></span></li></ul></li><li><span><a href="#Correlation-between-Signal-and-ClosePrice" data-toc-modified-id="Correlation-between-Signal-and-ClosePrice-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Correlation between Signal and ClosePrice</a></span></li><li><span><a href="#Relationship-between-Signal-and-ClosePrice" data-toc-modified-id="Relationship-between-Signal-and-ClosePrice-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Relationship between Signal and ClosePrice</a></span></li><li><span><a href="#Modeling" data-toc-modified-id="Modeling-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Modeling</a></span></li><li><span><a href="#Quality-Check-of-Model" data-toc-modified-id="Quality-Check-of-Model-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Quality Check of Model</a></span><ul class="toc-item"><li><span><a href="#Linear-relationship" data-toc-modified-id="Linear-relationship-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Linear relationship</a></span></li><li><span><a href="#Mean-of-residuals-should-be-0" data-toc-modified-id="Mean-of-residuals-should-be-0-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Mean of residuals should be 0</a></span></li><li><span><a href="#Residuals-are-homoscedastic" data-toc-modified-id="Residuals-are-homoscedastic-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Residuals are homoscedastic</a></span><ul class="toc-item"><li><span><a href="#Residual-vs-Fitted-values-plot" data-toc-modified-id="Residual-vs-Fitted-values-plot-5.3.1"><span class="toc-item-num">5.3.1&nbsp;&nbsp;</span>Residual vs Fitted values plot</a></span></li><li><span><a href="#Breusch-Pagan-Test" data-toc-modified-id="Breusch-Pagan-Test-5.3.2"><span class="toc-item-num">5.3.2&nbsp;&nbsp;</span>Breusch-Pagan Test</a></span></li></ul></li><li><span><a href="#Residuals-are-uncorrelated" data-toc-modified-id="Residuals-are-uncorrelated-5.4"><span class="toc-item-num">5.4&nbsp;&nbsp;</span>Residuals are uncorrelated</a></span><ul class="toc-item"><li><span><a href="#Plotting-Autocorrelation-Function" data-toc-modified-id="Plotting-Autocorrelation-Function-5.4.1"><span class="toc-item-num">5.4.1&nbsp;&nbsp;</span>Plotting Autocorrelation Function</a></span></li><li><span><a href="#Durbin-Watson-Test" data-toc-modified-id="Durbin-Watson-Test-5.4.2"><span class="toc-item-num">5.4.2&nbsp;&nbsp;</span>Durbin-Watson Test</a></span></li><li><span><a href="#Fix" data-toc-modified-id="Fix-5.4.3"><span class="toc-item-num">5.4.3&nbsp;&nbsp;</span>Fix</a></span></li></ul></li><li><span><a href="#Independent-variable-and-residuals-are-uncorrelated" data-toc-modified-id="Independent-variable-and-residuals-are-uncorrelated-5.5"><span class="toc-item-num">5.5&nbsp;&nbsp;</span>Independent variable and residuals are uncorrelated</a></span></li><li><span><a href="#Normality-test-of-residuals" data-toc-modified-id="Normality-test-of-residuals-5.6"><span class="toc-item-num">5.6&nbsp;&nbsp;</span>Normality test of residuals</a></span><ul class="toc-item"><li><span><a href="#Jarque-Barra-test" data-toc-modified-id="Jarque-Barra-test-5.6.1"><span class="toc-item-num">5.6.1&nbsp;&nbsp;</span>Jarque-Barra test</a></span></li><li><span><a href="#Fixes" data-toc-modified-id="Fixes-5.6.2"><span class="toc-item-num">5.6.2&nbsp;&nbsp;</span>Fixes</a></span></li></ul></li></ul></li><li><span><a href="#Conclusion" data-toc-modified-id="Conclusion-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Conclusion</a></span></li><li><span><a href="#Future-Work:" data-toc-modified-id="Future-Work:-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Future Work:</a></span><ul class="toc-item"><li><span><a href="#Feature-Engineering" data-toc-modified-id="Feature-Engineering-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Feature Engineering</a></span><ul class="toc-item"><li><span><a href="#DateTime-based-features" data-toc-modified-id="DateTime-based-features-7.1.1"><span class="toc-item-num">7.1.1&nbsp;&nbsp;</span>DateTime-based features</a></span></li><li><span><a href="#Technical-Indicators" data-toc-modified-id="Technical-Indicators-7.1.2"><span class="toc-item-num">7.1.2&nbsp;&nbsp;</span>Technical Indicators</a></span></li><li><span><a href="#Lagged-Features" data-toc-modified-id="Lagged-Features-7.1.3"><span class="toc-item-num">7.1.3&nbsp;&nbsp;</span>Lagged Features</a></span></li></ul></li><li><span><a href="#Advanced-Machine-Learning-Models" data-toc-modified-id="Advanced-Machine-Learning-Models-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Advanced Machine Learning Models</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -13101,16 +13101,15 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">import</span> <span class="nn">statsmodels.stats.api</span> <span class="k">as</span> <span class="nn">sms</span>
 <span class="kn">import</span> <span class="nn">statsmodels.tsa.api</span> <span class="k">as</span> <span class="nn">smt</span>
-<span class="kn">from</span> <span class="nn">statsmodels.graphics.regressionplots</span> <span class="k">import</span> <span class="n">abline_plot</span>
 
+<span class="kn">from</span> <span class="nn">statsmodels.graphics.regressionplots</span> <span class="k">import</span> <span class="n">abline_plot</span>
 <span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="k">import</span> <span class="n">register_matplotlib_converters</span>
 <span class="n">register_matplotlib_converters</span><span class="p">()</span>
-
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 </pre></div>
 
     </div>
@@ -13320,7 +13319,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Check if any data is missing for two columns.</p>
+<p>One of the first steps in data analysis is to check missing entries.</p>
 
 </div>
 </div>
@@ -13404,7 +13403,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Check if any data occurs on weekend (non-trading days)</p>
+<p>Next step is to check for any weekend data entry. This is because trading happens on weekdays. So any weekend data entries must be removed.</p>
 
 </div>
 </div>
@@ -13884,7 +13883,7 @@ memory usage: 15.6 KB
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><font color='red'><strong>Comment:</strong></p>
 <ul>
-<li>Distribution of the <code>Signal</code> and <code>ClosePrice</code> clearly shows the presence of outliers in each series based on the maximum value of the series. Let's plot the time-series and confirm the presence of outliers.</li>
+<li>Distribution of the <code>Signal</code> and <code>ClosePrice</code> clearly shows the presence of outliers in each series based on the maximum value of the data distribution table. Let's plot the time-series and confirm the presence of outliers.</li>
 </ul>
 </blockquote>
 
@@ -13906,7 +13905,7 @@ memory usage: 15.6 KB
 <li>Box plot</li>
 <li>Scatter plot</li>
 <li>Distribution plot (histogram)</li>
-<li>Moving average of the time-series &amp; plot of the noise component (different in original and moving average)</li>
+<li>Moving average of the time-series etc.</li>
 </ul>
 <p>Below are some utility functions to assist in plotting different charts.</p>
 
@@ -13915,7 +13914,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_color</span><span class="p">(</span><span class="n">column</span><span class="p">):</span>
@@ -14030,7 +14029,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plots_for_outliers</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -14080,7 +14079,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plots_for_outliers</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -14140,9 +14139,12 @@ memory usage: 15.6 KB
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are multiple ways to identify outliers given a dataset. Few of the these include:</p>
 <ol>
-<li>Z-score</li>
-<li>Modified Z-score</li>
-<li>Interquartile range</li>
+<li><p>Z-score: Z-scores are the number of standard deviations above and below the mean that each value falls</p>
+</li>
+<li><p>Modified Z-score: More robust than Z-score since it relies on median (and not mean) to detect outliers, so less influenced by outliers compared to traditional Z-score</p>
+</li>
+<li><p>Interquartile range: Measure of statistical dispersion, equal to the difference between 75th and 25th percentiles or between upper and lower quartiles</p>
+</li>
 </ol>
 
 </div>
@@ -14150,7 +14152,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_numpy_array</span><span class="p">(</span><span class="n">series</span><span class="p">):</span>
@@ -14217,7 +14219,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_outliers</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">column</span><span class="p">):</span>
@@ -14250,7 +14252,7 @@ memory usage: 15.6 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_outliers</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;zscore&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
@@ -14297,7 +14299,7 @@ ClosePrice Outliers using &#39;zscore&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_outliers</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;modified_zscore&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
@@ -14348,7 +14350,7 @@ ClosePrice Outliers using &#39;modified_zscore&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_outliers</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;iqr&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;Signal&#39;</span><span class="p">)</span>
@@ -14412,7 +14414,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make a copy of the data</span>
@@ -14442,7 +14444,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plots_for_outliers</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
@@ -14499,7 +14501,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pearson correlation metric using scipy stats function</span>
@@ -14532,7 +14534,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pearson correlation metric using pandas.corr() matrix</span>
@@ -14549,7 +14551,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14608,14 +14610,15 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>From the scatter plot, we know there exists a linear relationship between <code>Signal</code> and <code>ClosePrice</code>. But We need to also check whether there exists any relationship between <code>Signal</code> and <code>ClosePrice</code> at different lags (if any for both the series). To achieve this, we calculate cross-correlation between the two time-series for different lags.</p>
+<p>From the scatter plot, we know there exists a linear relationship between <code>Signal</code> and <code>ClosePrice</code>. But we need to also check whether there exists any relationship between <code>Signal</code> and <code>ClosePrice</code> at different lags (if any for both the series).</p>
+<p>To achieve this, we calculate cross-correlation between the two time-series for different lags and plot it.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plots_for_relationship</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -14651,7 +14654,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plots_for_relationship</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -14698,7 +14701,7 @@ ClosePrice Outliers using &#39;iqr&#39; method:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plots_for_relationship</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
@@ -14767,8 +14770,8 @@ ClosePrice Outliers using &#39;iqr&#39; method:
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Perform linear regression and plot the regression line.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
     <span class="n">x_cols</span> <span class="o">=</span> <span class="p">[]</span>
+    
     <span class="k">if</span> <span class="n">x_col</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> 
         <span class="c1"># If multiple regression, add all columns except y as X-variables</span>
         <span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="o">!=</span> <span class="n">y_col</span><span class="p">]</span>
@@ -14776,9 +14779,8 @@ ClosePrice Outliers using &#39;iqr&#39; method:
         <span class="c1"># Simple linear regression with just 1 independent variable</span>
         <span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">x_col</span><span class="p">]</span>
 
-    <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">x_cols</span><span class="p">]</span>
-    <span class="c1"># adding a intercept</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> 
+    <span class="c1"># adding a intercept to X</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">x_cols</span><span class="p">])</span> 
     <span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">y_col</span><span class="p">]</span>
 
     <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -14833,7 +14835,7 @@ Dep. Variable:             ClosePrice   R-squared:                       0.990
 Model:                            OLS   Adj. R-squared:                  0.990
 Method:                 Least Squares   F-statistic:                 6.789e+04
 Date:                Thu, 06 Feb 2020   Prob (F-statistic):               0.00
-Time:                        21:42:33   Log-Likelihood:                -1439.1
+Time:                        23:06:25   Log-Likelihood:                -1439.1
 No. Observations:                 665   AIC:                             2882.
 Df Residuals:                     663   BIC:                             2891.
 Df Model:                           1                                         
@@ -14875,19 +14877,6 @@ Warnings:
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14898,19 +14887,43 @@ Warnings:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Quality check of our fitted model is very important to understand if the fitted model does not violate the assumptions behind this simple linear model.</p>
+<p>Quality check of our fitted model is very important to check if the fitted model does not violate the assumptions behind this simple linear model.</p>
 <p>These assumptions are:</p>
 <ol>
-<li>Gauss-Markov Theorem: OLS estimator gives the best linear unbiased estimate (BLUE) of the coefficients, given:<ul>
+<li><p>Linear relationship between independent and dependent variable</p>
+</li>
+<li><p>Gauss-Markov Theorem: OLS estimator gives the best linear unbiased estimate (BLUE) of the coefficients, given:</p>
+<ul>
 <li>Mean or Expectation of error (residuals) is 0</li>
 <li>Errors are uncorrelated</li>
 <li>Errors are homoscedastic (i.e. they have equal variance)</li>
 </ul>
 </li>
-<li>Independent variables and residuals are uncorrelated</li>
-<li>Normality of residuals </li>
+<li><p>Independent variables and residuals are uncorrelated</p>
+</li>
+<li><p>Normality of residuals</p>
+</li>
 </ol>
 <p>Let's verify if these assumptions are not violated one-by-one.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Linear-relationship">Linear relationship<a class="anchor-link" href="#Linear-relationship">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><font color='red'><strong>Comment:</strong></p>
+<ul>
+<li>Linear relationship is clearly seen from the scatter plot of <code>Signal</code> against <code>ClosePrice</code>.</li>
+</ul>
+</blockquote>
 
 </div>
 </div>
@@ -15077,6 +15090,14 @@ Warnings:
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Breusch-Pagan test creates a statistic that is chi-squared distributed. p-value is the result of the chi-squared test and null hypothesis of homoscedasticity is rejected if p-value &lt; 0.05</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
@@ -15156,7 +15177,7 @@ Warnings:
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><font color='red'><strong>Comment:</strong></p>
 <ul>
-<li>p-value in LM and F-test is very low (&lt; 0.05). Thus, we reject the null hypothesis that errors (or residuals) are homoscedastic. Point to note that this test can give low p-value when the residuals are not heteroscedastic if the model is flawed (may be due to ommited variable bias). 
+<li>p-value in LM and F-test is lower than &lt; 0.05, but not siginificantly low (close to 0). Thus, we have to reject the null hypothesis that errors (or residuals) are homoscedastic. Point to note that this test can give low p-value when the residuals are not heteroscedastic if the model is flawed (may be due to ommited variable bias). 
 <pre><code>                                          </code></pre>
 </li>
 <li>Given the line in residual vs fitted value plot is quite flat, we can conclude that residuals are homoscedastic and Breusch-Pagan test is rejecting the null hypothesis due to some other flaws in the model.</li>
@@ -15245,6 +15266,18 @@ Warnings:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><font color='red'><strong>Comment:</strong></p>
+<ul>
+<li>ACF plot shows significant correlation at lags 1, 2 and 3. Thus it indicates the presence of positive serial autocorrelation.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Durbin-Watson-Test">Durbin-Watson Test<a class="anchor-link" href="#Durbin-Watson-Test">&#182;</a></h3><p>This test statistic is used to detect the presence of autocorrelation at lag 1 in the residuals. Value of the test statistic is always between 0 and 4. If the value is 2, then there is no autocorrelation. If value &lt; 2, then positive autocorrelation in residuals. If value &gt; 2, negative autocorrelation in residuals exists.</p>
 
 </div>
@@ -15288,7 +15321,7 @@ Warnings:
   <th>Date:</th>             <td>Thu, 06 Feb 2020</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>21:42:35</td>     <th>  Log-Likelihood:    </th> <td> -1439.1</td> 
+  <th>Time:</th>                 <td>23:17:50</td>     <th>  Log-Likelihood:    </th> <td> -1439.1</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   665</td>      <th>  AIC:               </th> <td>   2882.</td> 
@@ -15540,7 +15573,7 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><font color='red'><strong>Comment:</strong></p>
 <ul>
-<li>p-value is very low (&lt;&lt;&lt; 0.05), thus we can conclude that residuals do not follow Gaussian distribution.</li>
+<li>p-value is very low (&lt;&lt;&lt; 0.05), thus we can reject the null hypothesis that residuals are normally distributed.</li>
 </ul>
 </blockquote>
 
@@ -15560,7 +15593,7 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 <p>Some of the ways to fix the normality of residuals problem:</p>
 <blockquote><p><font color='red'><strong>Comment:</strong></p>
 <ul>
-<li>Non-linear transformation of the features</li>
+<li>Current Model does not correctly/fully explain the data. We need to come up with a good enough model that can fully explain the data. </li>
 </ul>
 </blockquote>
 
@@ -15579,9 +15612,10 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><font color='blue'><strong>To conclude:</strong></p>
 <ul>
-<li>Point 1</li>
-<li>Point 2</li>
-<li>Point 3</li>
+<li><p>Despite <code>Signal</code> being a statistical significant predictor of <code>ClosePrice</code>, some of the assumptions of the linear model are violated and thus current model does not fully explain the data.</p>
+</li>
+<li><p>Newer model must overcome the shortcomings of our current model and ensure assumptions are satisfied (adding lagged variables, transforming the features, differencing of feature values, taking log, using Generalized Least Squares etc)</p>
+</li>
 </ul>
 </blockquote>
 
@@ -15628,7 +15662,7 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_datetime_features</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
@@ -15660,7 +15694,7 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clean_data_with_features</span> <span class="o">=</span> <span class="n">add_datetime_features</span><span class="p">(</span><span class="n">clean_data</span><span class="p">)</span>
@@ -15668,189 +15702,6 @@ Statistics: 53.88044621856731 and p-value: 1.9952928198563313e-12
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[40]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Signal</th>
-      <th>ClosePrice</th>
-      <th>Year</th>
-      <th>Quarter</th>
-      <th>Month</th>
-      <th>Week</th>
-      <th>Day</th>
-      <th>DayofWeek</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2012-01-03</th>
-      <td>3.107767</td>
-      <td>127.495</td>
-      <td>2012</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2012-01-04</th>
-      <td>3.107282</td>
-      <td>127.700</td>
-      <td>2012</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2012-01-05</th>
-      <td>3.099757</td>
-      <td>128.040</td>
-      <td>2012</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2012-01-06</th>
-      <td>3.134223</td>
-      <td>127.710</td>
-      <td>2012</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>6</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>2012-01-09</th>
-      <td>3.135922</td>
-      <td>128.020</td>
-      <td>2012</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>9</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>2014-08-25</th>
-      <td>4.869175</td>
-      <td>200.200</td>
-      <td>2014</td>
-      <td>3</td>
-      <td>8</td>
-      <td>35</td>
-      <td>25</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2014-08-26</th>
-      <td>4.866505</td>
-      <td>200.330</td>
-      <td>2014</td>
-      <td>3</td>
-      <td>8</td>
-      <td>35</td>
-      <td>26</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2014-08-27</th>
-      <td>4.859468</td>
-      <td>200.250</td>
-      <td>2014</td>
-      <td>3</td>
-      <td>8</td>
-      <td>35</td>
-      <td>27</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2014-08-28</th>
-      <td>4.881311</td>
-      <td>200.140</td>
-      <td>2014</td>
-      <td>3</td>
-      <td>8</td>
-      <td>35</td>
-      <td>28</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2014-08-29</th>
-      <td>4.868689</td>
-      <td>200.710</td>
-      <td>2014</td>
-      <td>3</td>
-      <td>8</td>
-      <td>35</td>
-      <td>29</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-<p>665 rows × 8 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
